@@ -201,6 +201,9 @@ export default class Main extends Component {
   }
 
   setPrivacies(privacies, clickedEntry, navigator) {
+    if (privacies.privacies !== undefined) {
+      privacies = privacies.privacies;
+    }
     var userIds = privacies.map(function(privEntry) {
       return privEntry.userId;
     })
